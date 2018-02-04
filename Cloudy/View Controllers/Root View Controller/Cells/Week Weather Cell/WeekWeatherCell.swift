@@ -9,6 +9,10 @@
 import UIKit
 
 class WeekWeatherCell: UITableViewCell {
+    
+    // MARK: - identifiers
+    static let reuseIdentifier = "WeekWeatherCell"
+    static let nibIdentifier = "WeekWeatherCell"
 
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!

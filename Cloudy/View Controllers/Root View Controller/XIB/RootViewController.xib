@@ -13,12 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="Cloudy" customModuleProvider="target">
             <connections>
                 <outlet property="dateLabel" destination="ujQ-Bt-Cjq" id="ukk-hi-yoW"/>
+                <outlet property="dayActivityIndicator" destination="K0Z-Go-2hm" id="9P0-ES-chJ"/>
                 <outlet property="descriptionLabel" destination="nLp-pT-LYO" id="wRH-6n-CDg"/>
                 <outlet property="iconImageView" destination="LNb-em-syZ" id="OOg-ca-iHe"/>
                 <outlet property="messageLabel" destination="plS-td-rkd" id="Bkg-LG-1XT"/>
                 <outlet property="temperatureLabel" destination="5NT-o3-3fG" id="dm8-p8-a7h"/>
                 <outlet property="timeLabel" destination="Hgj-3C-nme" id="RWq-Aa-TfY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weekActivityIndicator" destination="gup-eR-d4D" id="ybo-3f-Dua"/>
                 <outlet property="weekWeatherTableView" destination="YCc-2q-6gC" id="9I9-RL-mUJ"/>
                 <outlet property="windSpeedLabel" destination="NwB-Vi-xuC" id="PLn-Or-jyp"/>
             </connections>
@@ -31,9 +33,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-TT-X1L">
                     <rect key="frame" x="0.0" y="44" width="375" height="150"/>
                     <subviews>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-Go-2hm" userLabel="Activity Indicator">
-                            <rect key="frame" x="178" y="65" width="20" height="20"/>
-                        </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plS-td-rkd" userLabel="Message Label">
                             <rect key="frame" x="16" y="75" width="343" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -93,6 +92,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-Go-2hm" userLabel="Day Activity Indicator">
+                            <rect key="frame" x="178" y="65" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -127,14 +129,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PI-iQ-x1C">
                     <rect key="frame" x="0.0" y="195" width="375" height="583"/>
                     <subviews>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gup-eR-d4D" userLabel="Activity Indicator">
-                            <rect key="frame" x="177" y="281" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YCc-2q-6gC">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gup-eR-d4D" userLabel="Week Activity Indicator">
+                            <rect key="frame" x="177" y="281" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
