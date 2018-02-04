@@ -68,6 +68,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="OI2-ws-q9v" id="byC-5c-Mei"/>
+                <outlet property="dayLabel" destination="S3k-3D-KEh" id="R2J-ur-432"/>
+                <outlet property="iconImageView" destination="kcM-WE-3jT" id="w0e-D9-dwM"/>
+                <outlet property="temperatureLabel" destination="GRg-rQ-0i8" id="0zP-Pt-yah"/>
+                <outlet property="windSpeedLabel" destination="4Gf-TA-RGg" id="KAB-3Q-jbH"/>
+            </connections>
             <point key="canvasLocation" x="25" y="81"/>
         </tableViewCell>
     </objects>
