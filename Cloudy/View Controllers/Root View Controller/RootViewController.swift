@@ -94,6 +94,7 @@ class RootViewController: UIViewController {
     func setupView() {
         setupActivityIndicators()
         registerWeekWeatherCell()
+        setupNotificationHandling()
     }
     
     func setupActivityIndicators() {
@@ -136,7 +137,7 @@ class RootViewController: UIViewController {
         }
     }
     
-    private func fetchWeatherData() {
+    internal func fetchWeatherData() {
         guard let location = currentLocation else { return }
         
         let latitude = location.coordinate.latitude
