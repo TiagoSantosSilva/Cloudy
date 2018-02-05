@@ -19,6 +19,7 @@
 		276910DE20290E4F0011BA79 /* LocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910DC20290E4F0011BA79 /* LocationsViewController.xib */; };
 		276910E220290F2B0011BA79 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910E020290F2B0011BA79 /* LocationCell.swift */; };
 		276910E320290F2B0011BA79 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910E120290F2B0011BA79 /* LocationCell.xib */; };
+		276910E720291B410011BA79 /* RootViewControllerLocationsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910E620291B410011BA79 /* RootViewControllerLocationsViewControllerDelegate.swift */; };
 		2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */; };
 		2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */; };
 		2784C88C2027B768003181B6 /* RootViewControllerDayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */; };
@@ -53,6 +54,7 @@
 		276910DC20290E4F0011BA79 /* LocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsViewController.xib; sourceTree = "<group>"; };
 		276910E020290F2B0011BA79 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		276910E120290F2B0011BA79 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
+		276910E620291B410011BA79 /* RootViewControllerLocationsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTableViewExtension.swift; sourceTree = "<group>"; };
 		2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationExtension.swift; sourceTree = "<group>"; };
 		2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewExtension.swift; sourceTree = "<group>"; };
@@ -160,14 +162,15 @@
 		2784C8862027AAD5003181B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */,
 				2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */,
 				2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */,
-				2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */,
-				2784C88D2027B772003181B6 /* RootViewControllerWeekViewExtension.swift */,
-				276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */,
-				276910C8202881FF0011BA79 /* RootViewControllerWeekViewDelegate.swift */,
-				276910CA202882600011BA79 /* RootViewControllerSettingsViewControllerDelegateExtension.swift */,
+				276910E620291B410011BA79 /* RootViewControllerLocationsViewControllerDelegate.swift */,
 				276910CC2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift */,
+				276910CA202882600011BA79 /* RootViewControllerSettingsViewControllerDelegateExtension.swift */,
+				2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */,
+				276910C8202881FF0011BA79 /* RootViewControllerWeekViewDelegate.swift */,
+				2784C88D2027B772003181B6 /* RootViewControllerWeekViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
 				27C36C7020277C2A007841F9 /* API.swift in Sources */,
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
+				276910E720291B410011BA79 /* RootViewControllerLocationsViewControllerDelegate.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,

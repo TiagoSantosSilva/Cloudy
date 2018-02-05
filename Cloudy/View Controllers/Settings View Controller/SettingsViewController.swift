@@ -35,11 +35,13 @@ class SettingsViewController: UIViewController {
     
     func setupNavigationBar() {
         title = "Settings"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(unwindToRootViewController))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonWasTapped))
     }
     
-    @objc func unwindToRootViewController() {
-        dismiss(animated: true, completion: nil)
+    @objc func doneButtonWasTapped() {
+        navigationController?.dismiss(animated: true, completion: {
+            self.dismiss(animated: true, completion: nil)
+        })
     }
     
     func registerSettingCell() {

@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol LocationsViewControllerDelegate {
+    
+}
+
 class LocationsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var delegate: LocationsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +34,18 @@ class LocationsViewController: UIViewController {
     }
     
     func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonPressed))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonWasTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonWasTapped))
     }
     
-    @objc func addButtonPressed() {
+    @objc func addButtonWasTapped() {
         print("Add button pressed.")
     }
     
-    @objc func doneButtonPressed() {
-        print("Done button pressed.")
+    @objc func doneButtonWasTapped() {
+        navigationController?.dismiss(animated: true, completion: {
+            self.dismiss(animated: true, completion: nil)
+        })
     }
 }
 

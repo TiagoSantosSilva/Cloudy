@@ -11,15 +11,16 @@ import UIKit
 extension RootViewController: DayViewDelegate {
     
     func controllerDidTapSettingsButton(controller: RootViewController) {
-        let settingsController = SettingsViewController()
-        settingsController.delegate = self
-        let navigationController = UINavigationController(rootViewController: settingsController)
+        let settingsViewController = SettingsViewController()
+        settingsViewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: settingsViewController)
         present(navigationController, animated: true)
     }
     
     func controllerDidTapLocationButton(controller: RootViewController) {
-        // TODO: -
-        // performSegue(withIdentifier: segueLocationsView, sender: self)
+        let locationsViewController = LocationsViewController()
+        locationsViewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: locationsViewController)
+        present(navigationController, animated: true)
     }
-    
 }
