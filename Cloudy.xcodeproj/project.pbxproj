@@ -13,6 +13,8 @@
 		276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910CC2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift */; };
 		276910D1202892AD0011BA79 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910CF202892AD0011BA79 /* SettingsViewController.swift */; };
 		276910D2202892AD0011BA79 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910D0202892AD0011BA79 /* SettingsViewController.xib */; };
+		276910D82028C7800011BA79 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910D62028C7800011BA79 /* SettingCell.swift */; };
+		276910D92028C7800011BA79 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910D72028C7800011BA79 /* SettingCell.xib */; };
 		2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */; };
 		2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */; };
 		2784C88C2027B768003181B6 /* RootViewControllerDayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */; };
@@ -41,6 +43,8 @@
 		276910CC2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationViewControllerDelegateExtension.swift; sourceTree = "<group>"; };
 		276910CF202892AD0011BA79 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		276910D0202892AD0011BA79 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		276910D62028C7800011BA79 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		276910D72028C7800011BA79 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTableViewExtension.swift; sourceTree = "<group>"; };
 		2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationExtension.swift; sourceTree = "<group>"; };
 		2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewExtension.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		276910D5202892C10011BA79 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				276910D62028C7800011BA79 /* SettingCell.swift */,
+				276910D72028C7800011BA79 /* SettingCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C36C8620277F9F007841F9 /* RootViewController.xib in Resources */,
+				276910D92028C7800011BA79 /* SettingCell.xib in Resources */,
 				27C36C8E20279BC2007841F9 /* WeekWeatherCell.xib in Resources */,
 				27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */,
 				276910D2202892AD0011BA79 /* SettingsViewController.xib in Resources */,
@@ -353,6 +360,7 @@
 				276910CB202882600011BA79 /* RootViewControllerSettingsViewControllerDelegateExtension.swift in Sources */,
 				276910D1202892AD0011BA79 /* SettingsViewController.swift in Sources */,
 				27C36C8220277DB9007841F9 /* DataManager.swift in Sources */,
+				276910D82028C7800011BA79 /* SettingCell.swift in Sources */,
 				27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */,
 				27C36C8520277F9F007841F9 /* RootViewController.swift in Sources */,
 				27C36C7620277CB8007841F9 /* UserDefaults.swift in Sources */,
