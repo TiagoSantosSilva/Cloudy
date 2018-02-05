@@ -6,13 +6,14 @@
 //  Copyright © 2018 Tiago Santos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension RootViewController: DayViewDelegate {
     
     func controllerDidTapSettingsButton(controller: RootViewController) {
-        // TODO: - 
-        // performSegue(withIdentifier: SegueSettingsView, sender: self)
+        let settingsController = SettingsViewController()
+        let navigationController = UINavigationController(rootViewController: settingsController)
+        present(navigationController, animated: true)
     }
     
     func controllerDidTapLocationButton(controller: RootViewController) {

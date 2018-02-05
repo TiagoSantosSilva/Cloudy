@@ -87,6 +87,8 @@ class RootViewController: UIViewController {
         setupView()
         weekWeatherTableView.dataSource = self
         weekWeatherTableView.delegate = self
+        dayViewDelegate = self
+        weekViewDelegate = self
     }
     
     // MARK : - Setups
