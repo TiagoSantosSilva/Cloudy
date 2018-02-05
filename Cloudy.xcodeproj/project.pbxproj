@@ -15,6 +15,10 @@
 		276910D2202892AD0011BA79 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910D0202892AD0011BA79 /* SettingsViewController.xib */; };
 		276910D82028C7800011BA79 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910D62028C7800011BA79 /* SettingCell.swift */; };
 		276910D92028C7800011BA79 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910D72028C7800011BA79 /* SettingCell.xib */; };
+		276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910DB20290E4F0011BA79 /* LocationsViewController.swift */; };
+		276910DE20290E4F0011BA79 /* LocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910DC20290E4F0011BA79 /* LocationsViewController.xib */; };
+		276910E220290F2B0011BA79 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910E020290F2B0011BA79 /* LocationCell.swift */; };
+		276910E320290F2B0011BA79 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276910E120290F2B0011BA79 /* LocationCell.xib */; };
 		2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */; };
 		2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */; };
 		2784C88C2027B768003181B6 /* RootViewControllerDayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */; };
@@ -45,6 +49,10 @@
 		276910D0202892AD0011BA79 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		276910D62028C7800011BA79 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		276910D72028C7800011BA79 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		276910DB20290E4F0011BA79 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		276910DC20290E4F0011BA79 /* LocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsViewController.xib; sourceTree = "<group>"; };
+		276910E020290F2B0011BA79 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		276910E120290F2B0011BA79 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		2784C8872027AAEF003181B6 /* RootViewControllerTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerTableViewExtension.swift; sourceTree = "<group>"; };
 		2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationExtension.swift; sourceTree = "<group>"; };
 		2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewExtension.swift; sourceTree = "<group>"; };
@@ -114,6 +122,41 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		276910DA20290E2F0011BA79 /* Locations View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				276910DB20290E4F0011BA79 /* LocationsViewController.swift */,
+				276910DF20290F190011BA79 /* Cells */,
+				276910E520290F790011BA79 /* XIB */,
+			);
+			path = "Locations View Controller";
+			sourceTree = "<group>";
+		};
+		276910DF20290F190011BA79 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				276910E420290F680011BA79 /* Location Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		276910E420290F680011BA79 /* Location Cell */ = {
+			isa = PBXGroup;
+			children = (
+				276910E020290F2B0011BA79 /* LocationCell.swift */,
+				276910E120290F2B0011BA79 /* LocationCell.xib */,
+			);
+			path = "Location Cell";
+			sourceTree = "<group>";
+		};
+		276910E520290F790011BA79 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				276910DC20290E4F0011BA79 /* LocationsViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		2784C8862027AAD5003181B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,8 +208,9 @@
 		27C36C6420276E0C007841F9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				276910CE20288F0F0011BA79 /* Settings View Controller */,
+				276910DA20290E2F0011BA79 /* Locations View Controller */,
 				27C36C8720279B5F007841F9 /* Root View Controller */,
+				276910CE20288F0F0011BA79 /* Settings View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -342,8 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C36C8620277F9F007841F9 /* RootViewController.xib in Resources */,
+				276910E320290F2B0011BA79 /* LocationCell.xib in Resources */,
 				276910D92028C7800011BA79 /* SettingCell.xib in Resources */,
 				27C36C8E20279BC2007841F9 /* WeekWeatherCell.xib in Resources */,
+				276910DE20290E4F0011BA79 /* LocationsViewController.xib in Resources */,
 				27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */,
 				276910D2202892AD0011BA79 /* SettingsViewController.xib in Resources */,
 			);
@@ -362,6 +408,7 @@
 				27C36C8220277DB9007841F9 /* DataManager.swift in Sources */,
 				276910D82028C7800011BA79 /* SettingCell.swift in Sources */,
 				27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */,
+				276910E220290F2B0011BA79 /* LocationCell.swift in Sources */,
 				27C36C8520277F9F007841F9 /* RootViewController.swift in Sources */,
 				27C36C7620277CB8007841F9 /* UserDefaults.swift in Sources */,
 				2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */,
@@ -370,6 +417,7 @@
 				276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */,
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
 				27C36C7020277C2A007841F9 /* API.swift in Sources */,
+				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,
