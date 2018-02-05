@@ -8,22 +8,22 @@
 
 import Foundation
 
-//extension RootViewController: SettingsViewControllerDelegate {
-//
-//    func controllerDidChangeTimeNotation(controller: SettingsViewController) {
-//        dayViewController.reloadData()
-//        weekViewController.reloadData()
-//    }
-//
-//    func controllerDidChangeUnitsNotation(controller: SettingsViewController) {
-//        dayViewController.reloadData()
-//        weekViewController.reloadData()
-//    }
-//
-//    func controllerDidChangeTemperatureNotation(controller: SettingsViewController) {
-//        dayViewController.reloadData()
-//        weekViewController.reloadData()
-//    }
-//
-//}
+extension RootViewController: SettingsViewControllerDelegate {
+
+    func controllerDidChangeTimeNotation(controller: SettingsViewController) {
+        reloadDayViewData()
+        reloadWeekViewData()
+    }
+
+    func controllerDidChangeUnitsNotation(controller: SettingsViewController) {
+        reloadDayViewData()
+        reloadWeekViewData()
+    }
+
+    func controllerDidChangeTemperatureNotation(controller: SettingsViewController) {
+        reloadDayViewData()
+        reloadWeekViewData()
+    }
+
+}
 

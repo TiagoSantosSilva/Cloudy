@@ -12,6 +12,7 @@ extension RootViewController: DayViewDelegate {
     
     func controllerDidTapSettingsButton(controller: RootViewController) {
         let settingsController = SettingsViewController()
+        settingsController.delegate = self
         let navigationController = UINavigationController(rootViewController: settingsController)
         present(navigationController, animated: true)
     }

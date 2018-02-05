@@ -18,6 +18,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var settingsTableView: UITableView!
     
+    var delegate: SettingsViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -28,20 +30,25 @@ class SettingsViewController: UIViewController {
     func setupView() {
         setupNavigationBar()
         registerSettingCell()
+        setupTableView()
     }
     
     func setupNavigationBar() {
-        navigationItem.title = "Settings"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
+        title = "Settings"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(unwindToRootViewController))
     }
     
-    @objc func doneButtonPressed() {
-        print("Done button pressed.")
+    @objc func unwindToRootViewController() {
+        dismiss(animated: true, completion: nil)
     }
     
     func registerSettingCell() {
         let cellNib = UINib(nibName: SettingCell.nibName, bundle: nil)
         settingsTableView.register(cellNib, forCellReuseIdentifier: SettingCell.reuseIdentifier)
+    }
+    
+    func setupTableView() {
+        settingsTableView.separatorInset = UIEdgeInsets.zero
     }
 }
 
@@ -126,11 +133,31 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case .time:
-            break
+            let timeNotation = UserDefaults.timeNotation()
+            guard indexPath.row != timeNotation.rawValue else { return }
+            
+            if let newTimeNotation = TimeNotation(rawValue: indexPath.row) {
+                UserDefaults.setTimeNotation(timeNotation: newTimeNotation)
+                delegate?.controllerDidChangeTimeNotation(controller: self)
+            }
         case .units:
-            break
+            let unitsNotation = UserDefaults.unitsNotation()
+            guard indexPath.row != unitsNotation.rawValue else { return }
+            
+            if let newUnitNotation = UnitsNotation(rawValue: indexPath.row) {
+                UserDefaults.setUnitsNotation(unitsNotation: newUnitNotation)
+                delegate?.controllerDidChangeUnitsNotation(controller: self)
+            }
         case .temperature:
-            break
+            let temperatureNotation = UserDefaults.temperatureNotation()
+            guard indexPath.row != temperatureNotation.rawValue else { return }
+            
+            if let newTemperatureNotation = TemperatureNotation(rawValue: indexPath.row) {
+                UserDefaults.setTemperatureNotation(temperatureNotation: newTemperatureNotation)
+                delegate?.controllerDidChangeTemperatureNotation(controller: self)
+            }
         }
+        
+        settingsTableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
     }
 }
