@@ -18,7 +18,16 @@ extension RootViewController {
     }
     
     internal func updateWeekView() {
+        weekActivityIndicator.stopAnimating()
+        weekWeatherTableView.refreshControl?.endRefreshing()
         
+        guard week != nil else {
+            messageLabel.isHidden = false
+            messageLabel.text = "Cloudy was unable to fetch weather data."
+            return
+        }
+        
+        weekWeatherTableView.reloadData()
     }
     
     internal func setupTableView() {
