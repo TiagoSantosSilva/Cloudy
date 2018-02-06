@@ -43,6 +43,7 @@ class LocationsViewController: UIViewController {
     // MARK: - Setups
     
     func setupView() {
+        title = "Locations"
         registerLocationCell()
         setupDelegates()
         setupNavigationBar()
