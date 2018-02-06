@@ -11,6 +11,9 @@ import CoreLocation
 
 class RootViewController: UIViewController {
     
+    @IBOutlet weak var dayView: UIView!
+    @IBOutlet weak var weekView: UIView!
+    
     @IBOutlet weak var dayActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var weekActivityIndicator: UIActivityIndicatorView!
     
@@ -97,6 +100,8 @@ class RootViewController: UIViewController {
         setupActivityIndicators()
         registerWeekWeatherCell()
         setupNotificationHandling()
+        setupTableView()
+        setupRefreshControl()
     }
     
     func setupActivityIndicators() {

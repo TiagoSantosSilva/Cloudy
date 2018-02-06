@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="dateLabel" destination="ujQ-Bt-Cjq" id="ukk-hi-yoW"/>
                 <outlet property="dayActivityIndicator" destination="K0Z-Go-2hm" id="9P0-ES-chJ"/>
+                <outlet property="dayView" destination="wbB-TT-X1L" id="lHe-h7-0xL"/>
                 <outlet property="descriptionLabel" destination="nLp-pT-LYO" id="wRH-6n-CDg"/>
                 <outlet property="iconImageView" destination="LNb-em-syZ" id="OOg-ca-iHe"/>
                 <outlet property="messageLabel" destination="plS-td-rkd" id="Bkg-LG-1XT"/>
@@ -21,6 +22,7 @@
                 <outlet property="timeLabel" destination="Hgj-3C-nme" id="RWq-Aa-TfY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weekActivityIndicator" destination="gup-eR-d4D" id="ybo-3f-Dua"/>
+                <outlet property="weekView" destination="7PI-iQ-x1C" id="quL-ul-5rR"/>
                 <outlet property="weekWeatherTableView" destination="YCc-2q-6gC" id="9I9-RL-mUJ"/>
                 <outlet property="windSpeedLabel" destination="NwB-Vi-xuC" id="PLn-Or-jyp"/>
             </connections>
@@ -30,7 +32,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-TT-X1L">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-Go-2hm" userLabel="Day Activity Indicator">
+                    <rect key="frame" x="177.66666666666666" y="109" width="20" height="20"/>
+                </activityIndicatorView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-TT-X1L" userLabel="Day View">
                     <rect key="frame" x="0.0" y="44" width="375" height="150"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plS-td-rkd" userLabel="Message Label">
@@ -58,7 +63,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-em-syZ">
-                            <rect key="frame" x="157.66666666666666" y="59" width="60" height="60"/>
+                            <rect key="frame" x="158" y="59" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="XMo-QS-HO9"/>
                                 <constraint firstAttribute="height" constant="60" id="iy9-IR-y9Z"/>
@@ -98,9 +103,6 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-Go-2hm" userLabel="Day Activity Indicator">
-                            <rect key="frame" x="178" y="65" width="20" height="20"/>
-                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -108,9 +110,7 @@
                         <constraint firstAttribute="trailing" secondItem="nLp-pT-LYO" secondAttribute="trailing" constant="20" id="4jU-0F-mNj"/>
                         <constraint firstItem="LNb-em-syZ" firstAttribute="centerX" secondItem="wbB-TT-X1L" secondAttribute="centerX" id="61g-gF-twY"/>
                         <constraint firstItem="LNb-em-syZ" firstAttribute="centerY" secondItem="wbB-TT-X1L" secondAttribute="centerY" constant="14" id="7Cw-pM-6vu"/>
-                        <constraint firstItem="K0Z-Go-2hm" firstAttribute="centerX" secondItem="wbB-TT-X1L" secondAttribute="centerX" id="7PI-pj-m8M"/>
                         <constraint firstItem="plS-td-rkd" firstAttribute="leading" secondItem="wbB-TT-X1L" secondAttribute="leading" constant="16" id="8YW-gv-8Wa"/>
-                        <constraint firstItem="K0Z-Go-2hm" firstAttribute="centerY" secondItem="wbB-TT-X1L" secondAttribute="centerY" id="9Zi-ib-uhy"/>
                         <constraint firstItem="5NT-o3-3fG" firstAttribute="centerY" secondItem="LNb-em-syZ" secondAttribute="centerY" id="JOF-f4-hIU"/>
                         <constraint firstAttribute="trailing" secondItem="NwB-Vi-xuC" secondAttribute="trailing" constant="8" id="OdG-Jn-eDb"/>
                         <constraint firstItem="ujQ-Bt-Cjq" firstAttribute="top" secondItem="wbB-TT-X1L" secondAttribute="top" constant="16" id="P80-Mf-Ne4"/>
@@ -132,17 +132,13 @@
                         <constraint firstAttribute="bottom" secondItem="nLp-pT-LYO" secondAttribute="bottom" constant="8" id="wgO-sP-YOE"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PI-iQ-x1C">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PI-iQ-x1C" userLabel="Week View">
                     <rect key="frame" x="0.0" y="195" width="375" height="583"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YCc-2q-6gC">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
-                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gup-eR-d4D" userLabel="Week Activity Indicator">
-                            <rect key="frame" x="177" y="281" width="20" height="20"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -152,16 +148,23 @@
                         <constraint firstAttribute="bottom" secondItem="YCc-2q-6gC" secondAttribute="bottom" id="zJO-5h-PfM"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gup-eR-d4D" userLabel="Week Activity Indicator">
+                    <rect key="frame" x="177.66666666666666" y="476" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="wbB-TT-X1L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="21h-P0-FKZ"/>
+                <constraint firstItem="gup-eR-d4D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KPf-hg-T8F"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7PI-iQ-x1C" secondAttribute="bottom" id="KVw-Zv-0E1"/>
                 <constraint firstItem="7PI-iQ-x1C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rh7-HT-I25"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7PI-iQ-x1C" secondAttribute="trailing" id="W3x-PZ-vZj"/>
                 <constraint firstItem="7PI-iQ-x1C" firstAttribute="top" secondItem="wbB-TT-X1L" secondAttribute="bottom" constant="1" id="W7H-GU-2qJ"/>
                 <constraint firstItem="wbB-TT-X1L" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YEM-9u-8jd"/>
+                <constraint firstItem="K0Z-Go-2hm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h7W-up-5r4"/>
+                <constraint firstItem="gup-eR-d4D" firstAttribute="centerY" secondItem="7PI-iQ-x1C" secondAttribute="centerY" id="hCR-dr-d7O"/>
                 <constraint firstItem="wbB-TT-X1L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nUj-F6-Jkp"/>
+                <constraint firstItem="K0Z-Go-2hm" firstAttribute="centerY" secondItem="wbB-TT-X1L" secondAttribute="centerY" id="vyk-1b-YUs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="25.5" y="52"/>

@@ -20,6 +20,7 @@ extension RootViewController {
     internal func updateWeekView() {
         weekActivityIndicator.stopAnimating()
         weekWeatherTableView.refreshControl?.endRefreshing()
+        turnWeekContainerVisible()
         
         guard week != nil else {
             messageLabel.isHidden = false
@@ -28,6 +29,10 @@ extension RootViewController {
         }
         
         weekWeatherTableView.reloadData()
+    }
+    
+    func turnWeekContainerVisible() {
+        weekView.isHidden = false
     }
     
     internal func setupTableView() {

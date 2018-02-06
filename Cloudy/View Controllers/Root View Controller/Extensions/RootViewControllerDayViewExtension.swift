@@ -32,6 +32,8 @@ extension RootViewController {
     }
     
     func updateDayWeatherDataContainer(withWeatherData weatherData: WeatherData) {
+        turnDayContainerVisible()
+        
         var windSpeed = weatherData.windSpeed
         var temperature = weatherData.temperature
         
@@ -66,5 +68,9 @@ extension RootViewController {
         }
         
         iconImageView.image = imageForIcon(withName: weatherData.icon)
+    }
+    
+    func turnDayContainerVisible() {
+        dayView.isHidden = false
     }
 }
