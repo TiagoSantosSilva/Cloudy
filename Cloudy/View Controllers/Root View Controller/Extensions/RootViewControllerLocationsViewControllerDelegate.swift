@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import CoreLocation
 
 extension RootViewController: LocationsViewControllerDelegate {
-    
+    func controller(_ controller: LocationsViewController, didSelectLocation location: CLLocation) {
+        // TODO: - 
+    }
 }

@@ -39,6 +39,8 @@
 		27C36C8620277F9F007841F9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C8420277F9F007841F9 /* RootViewController.xib */; };
 		27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C8B20279BC2007841F9 /* WeekWeatherCell.swift */; };
 		27C36C8E20279BC2007841F9 /* WeekWeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C8C20279BC2007841F9 /* WeekWeatherCell.xib */; };
+		27DB21422029DF2E000493A5 /* LocationRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB21412029DF2E000493A5 /* LocationRepresentable.swift */; };
+		27DB21452029DFA3000493A5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB21442029DFA3000493A5 /* LocationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		27C36C8420277F9F007841F9 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		27C36C8B20279BC2007841F9 /* WeekWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekWeatherCell.swift; sourceTree = "<group>"; };
 		27C36C8C20279BC2007841F9 /* WeekWeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekWeatherCell.xib; sourceTree = "<group>"; };
+		27DB21412029DF2E000493A5 /* LocationRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepresentable.swift; sourceTree = "<group>"; };
+		27DB21442029DFA3000493A5 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +131,10 @@
 		276910DA20290E2F0011BA79 /* Locations View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27DB21432029DF81000493A5 /* View Models */,
 				276910DB20290E4F0011BA79 /* LocationsViewController.swift */,
 				276910DF20290F190011BA79 /* Cells */,
+				27DB21402029DF1A000493A5 /* Protocols */,
 				276910E520290F790011BA79 /* XIB */,
 			);
 			path = "Locations View Controller";
@@ -329,6 +335,22 @@
 			path = "Week Weather Cell";
 			sourceTree = "<group>";
 		};
+		27DB21402029DF1A000493A5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27DB21412029DF2E000493A5 /* LocationRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		27DB21432029DF81000493A5 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				27DB21442029DFA3000493A5 /* LocationsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +432,7 @@
 				276910D1202892AD0011BA79 /* SettingsViewController.swift in Sources */,
 				27C36C8220277DB9007841F9 /* DataManager.swift in Sources */,
 				276910D82028C7800011BA79 /* SettingCell.swift in Sources */,
+				27DB21422029DF2E000493A5 /* LocationRepresentable.swift in Sources */,
 				27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */,
 				276910E220290F2B0011BA79 /* LocationCell.swift in Sources */,
 				27C36C8520277F9F007841F9 /* RootViewController.swift in Sources */,
@@ -417,6 +440,7 @@
 				2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */,
 				27C36C7A20277D27007841F9 /* WeatherData.swift in Sources */,
 				27C36C7320277C8B007841F9 /* Conversions.swift in Sources */,
+				27DB21452029DFA3000493A5 /* LocationsViewModel.swift in Sources */,
 				276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */,
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
 				27C36C7020277C2A007841F9 /* API.swift in Sources */,
