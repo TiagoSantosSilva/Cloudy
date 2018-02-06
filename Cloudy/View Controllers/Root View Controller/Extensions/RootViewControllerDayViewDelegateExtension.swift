@@ -20,6 +20,7 @@ extension RootViewController: DayViewDelegate {
     func controllerDidTapLocationButton(controller: RootViewController) {
         let locationsViewController = LocationsViewController()
         locationsViewController.delegate = self
+        locationsViewController.currentLocation = currentLocation
         let navigationController = UINavigationController(rootViewController: locationsViewController)
         present(navigationController, animated: true)
     }
