@@ -42,8 +42,6 @@
 		27DB21452029DFA3000493A5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB21442029DFA3000493A5 /* LocationsViewModel.swift */; };
 		27DB214A202A171C000493A5 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB2148202A171C000493A5 /* AddLocationViewController.swift */; };
 		27DB214B202A171C000493A5 /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DB2149202A171C000493A5 /* AddLocationViewController.xib */; };
-		27DB2150202A1BBF000493A5 /* CloudySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB214E202A1BBF000493A5 /* CloudySearchController.swift */; };
-		27DB2151202A1BBF000493A5 /* CloudySearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DB214F202A1BBF000493A5 /* CloudySearchController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,8 +82,6 @@
 		27DB21442029DFA3000493A5 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		27DB2148202A171C000493A5 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		27DB2149202A171C000493A5 /* AddLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationViewController.xib; sourceTree = "<group>"; };
-		27DB214E202A1BBF000493A5 /* CloudySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudySearchController.swift; sourceTree = "<group>"; };
-		27DB214F202A1BBF000493A5 /* CloudySearchController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudySearchController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +202,6 @@
 		27C36C5120276D37007841F9 /* Cloudy */ = {
 			isa = PBXGroup;
 			children = (
-				27DB214D202A1BA7000493A5 /* Search Controllers */,
 				27C36C6720276EBC007841F9 /* Application Delegate */,
 				27C36C6C20277C02007841F9 /* Configuration */,
 				27C36C7120277C81007841F9 /* Extensions */,
@@ -383,15 +378,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		27DB214D202A1BA7000493A5 /* Search Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				27DB214E202A1BBF000493A5 /* CloudySearchController.swift */,
-				27DB214F202A1BBF000493A5 /* CloudySearchController.xib */,
-			);
-			path = "Search Controllers";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,7 +439,6 @@
 			files = (
 				27C36C8620277F9F007841F9 /* RootViewController.xib in Resources */,
 				276910E320290F2B0011BA79 /* LocationCell.xib in Resources */,
-				27DB2151202A1BBF000493A5 /* CloudySearchController.xib in Resources */,
 				276910D92028C7800011BA79 /* SettingCell.xib in Resources */,
 				27C36C8E20279BC2007841F9 /* WeekWeatherCell.xib in Resources */,
 				276910DE20290E4F0011BA79 /* LocationsViewController.xib in Resources */,
@@ -491,7 +476,6 @@
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
-				27DB2150202A1BBF000493A5 /* CloudySearchController.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,
 				27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */,
 				276910C9202881FF0011BA79 /* RootViewControllerWeekViewDelegate.swift in Sources */,
