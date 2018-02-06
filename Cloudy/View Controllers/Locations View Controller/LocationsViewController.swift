@@ -67,7 +67,9 @@ class LocationsViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func addButtonWasTapped() {
-        print("Add button pressed.")
+        let addLocationViewController = AddLocationViewController()
+        addLocationViewController.delegate = self
+        navigationController?.pushViewController(addLocationViewController, animated: true)
     }
     
     @objc func doneButtonWasTapped() {
@@ -210,5 +212,16 @@ extension LocationsViewController: UITableViewDelegate {
             
             dismiss(animated: true)
         }
+    }
+}
+
+extension LocationsViewController: AddLocationViewControllerDelegate {
+    func controller(_ controller: AddLocationViewController, didAddLocation location: Location) {
+        // Update User Defaults
+        UserDefaults.addLocation(location)
+        
+        // Update Locations
+        favorites.append(location)
+        tableView.reloadData()
     }
 }
