@@ -184,5 +184,30 @@ extension LocationsViewController: UITableViewDataSource {
 }
 
 extension LocationsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError("Unexpected Section")
+        }
+        
+        var location: CLLocation?
+        
+        switch section {
+        case .current:
+            if let currentLocation = currentLocation {
+                location = currentLocation
+            }
+        case.favorite:
+            if hasFavorites {
+                location = favorites[indexPath.row].location
+            }
+        }
+        
+        if let newLocation = location {
+            delegate?.controller(self, didSelectLocation: newLocation)
+            
+            dismiss(animated: true)
+        }
+    }
 }
