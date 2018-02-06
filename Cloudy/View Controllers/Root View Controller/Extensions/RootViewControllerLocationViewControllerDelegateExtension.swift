@@ -1,5 +1,5 @@
 //
-//  RootViewControllerLocationsViewControllerDelegate.swift
+//  RootViewControllerLocationViewControllerDelegateExtension.swift
 //  Cloudy
 //
 //  Created by Tiago Santos on 05/02/18.
@@ -10,7 +10,11 @@ import Foundation
 import CoreLocation
 
 extension RootViewController: LocationsViewControllerDelegate {
+
     func controller(_ controller: LocationsViewController, didSelectLocation location: CLLocation) {
-        // TODO: - 
+        // Update Current Location
+        currentLocation = location
     }
+
 }
+
