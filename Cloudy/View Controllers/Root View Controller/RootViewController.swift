@@ -57,7 +57,7 @@ class RootViewController: UIViewController {
     
     // MARK: -
     
-    var now: WeatherData? {
+    var dayViewViewModel: DayViewViewModel? {
         didSet {
             updateDayView()
         }
@@ -156,8 +156,8 @@ class RootViewController: UIViewController {
             if let error = error {
                 print(error)
             } else if let response = response {
-                // Configure Day View Controller
-                self.now = response
+                // Configure Day View View Model
+                self.dayViewViewModel = DayViewViewModel(weatherData: response)
                 
                 // Configure Week View Controller
                 self.week = response.dailyData

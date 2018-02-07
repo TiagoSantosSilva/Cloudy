@@ -22,8 +22,8 @@ extension RootViewController {
     func updateDayView() {
         dayActivityIndicator.stopAnimating()
         
-        if let now = now {
-            updateDayWeatherDataContainer(withWeatherData: now)
+        if let dayViewViewModel = dayViewViewModel {
+            updateDayWeatherDataContainer(withViewModel: dayViewViewModel)
             
         } else {
             messageLabel.isHidden = false
@@ -31,43 +31,15 @@ extension RootViewController {
         }
     }
     
-    func updateDayWeatherDataContainer(withWeatherData weatherData: WeatherData) {
+    func updateDayWeatherDataContainer(withViewModel viewModel: DayViewViewModel) {
         turnDayContainerVisible()
         
-        var windSpeed = weatherData.windSpeed
-        var temperature = weatherData.temperature
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, MMMM d"
-        dateLabel.text = dateFormatter.string(from: weatherData.time)
-        
-        let timeFormatter = DateFormatter()
-        
-        if UserDefaults.timeNotation() == .twelveHour {
-            timeFormatter.dateFormat = "hh:mm a"
-        } else {
-            timeFormatter.dateFormat = "HH:mm"
-        }
-        
-        timeLabel.text = timeFormatter.string(from: weatherData.time)
-        
-        descriptionLabel.text = weatherData.summary
-        
-        if UserDefaults.temperatureNotation() != .fahrenheit {
-            temperature = temperature.toCelcius()
-            temperatureLabel.text = String(format: "%.1f °C", temperature)
-        } else {
-            temperatureLabel.text = String(format: "%.1f °F", temperature)
-        }
-        
-        if UserDefaults.unitsNotation() != .imperial {
-            windSpeed = windSpeed.toKPH()
-            windSpeedLabel.text = String(format: "%.f KPH", windSpeed)
-        } else {
-            windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
-        }
-        
-        iconImageView.image = imageForIcon(withName: weatherData.icon)
+        dateLabel.text = viewModel.date
+        timeLabel.text = viewModel.time
+        iconImageView.image = viewModel.image
+        windSpeedLabel.text = viewModel.windSpeed
+        descriptionLabel.text = viewModel.summary
+        temperatureLabel.text = viewModel.temperature
     }
     
     func turnDayContainerVisible() {
