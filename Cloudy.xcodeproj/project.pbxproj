@@ -33,6 +33,9 @@
 		27996DFF202C8126007C1FFE /* SettingsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DFE202C8126007C1FFE /* SettingsRepresentable.swift */; };
 		27996E01202C9962007C1FFE /* WeatherDayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */; };
 		27996E04202C9B9E007C1FFE /* WeatherDayRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */; };
+		27996E1C202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E1B202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift */; };
+		27996E20202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E1F202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift */; };
+		27996E22202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E21202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift */; };
 		27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C5220276D37007841F9 /* AppDelegate.swift */; };
 		27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C5920276D37007841F9 /* Assets.xcassets */; };
 		27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C6D20277C1E007841F9 /* Defaults.swift */; };
@@ -93,6 +96,9 @@
 		27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayRepresentable.swift; sourceTree = "<group>"; };
 		27996E0D202CA036007C1FFE /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27996E11202CA036007C1FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27996E1B202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTimeViewModelTests.swift; sourceTree = "<group>"; };
+		27996E1F202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUnitsViewModelTests.swift; sourceTree = "<group>"; };
+		27996E21202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTemperatureViewModelTests.swift; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -345,6 +351,9 @@
 		27996E1A202CA06F007C1FFE /* Test Cases */ = {
 			isa = PBXGroup;
 			children = (
+				27996E1B202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift */,
+				27996E1F202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift */,
+				27996E21202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift */,
 			);
 			path = "Test Cases";
 			sourceTree = "<group>";
@@ -599,6 +608,7 @@
 				TargetAttributes = {
 					27996E0C202CA036007C1FFE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 27C36C4E20276D37007841F9;
 					};
@@ -658,6 +668,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27996E1C202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift in Sources */,
+				27996E20202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift in Sources */,
+				27996E22202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,12 +732,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64E8842TP6;
 				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Santos.CloudyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
@@ -735,6 +750,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64E8842TP6;
 				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
