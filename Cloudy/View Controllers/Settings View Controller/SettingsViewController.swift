@@ -115,8 +115,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
         guard viewModel != nil else { return cell }
         
-        cell.mainLabel.text = viewModel!.text
-        cell.accessoryType = viewModel!.accessoryType
+        cell.configure(withViewModel: viewModel!)
         return cell
     }
     
@@ -127,6 +126,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             fatalError("Unexpected Section")
         }
         
+        // TODO: - Pass the implementation into the View Model
         switch section {
         case .time:
             let timeNotation = UserDefaults.timeNotation()

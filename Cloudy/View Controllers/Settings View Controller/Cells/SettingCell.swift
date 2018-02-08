@@ -10,20 +10,19 @@ import UIKit
 
 class SettingCell: UITableViewCell {
 
+    // MARK: - Type Properties
+    
     static let reuseIdentifier = "SettingCell"
     static let nibName = "SettingCell"
     
+    // MARK: - Properties
+    
     @IBOutlet weak var mainLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - Configuration
     
+    func configure(withViewModel viewModel: SettingsRepresentable) {
+        mainLabel.text = viewModel.text
+        accessoryType = viewModel.accessoryType
+    }
 }
