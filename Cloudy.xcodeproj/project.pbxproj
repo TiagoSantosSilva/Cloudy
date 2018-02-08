@@ -41,6 +41,7 @@
 		27996E2A202CD07D007C1FFE /* DayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */; };
 		27996E2C202CDAB1007C1FFE /* WeekViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */; };
 		27996E2E202D092F007C1FFE /* WeatherDayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E2D202D092F007C1FFE /* WeatherDayViewViewModel.swift */; };
+		27996E31202D0CD1007C1FFE /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E30202D0CD1007C1FFE /* AddLocationViewModel.swift */; };
 		27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C5220276D37007841F9 /* AppDelegate.swift */; };
 		27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C5920276D37007841F9 /* Assets.xcassets */; };
 		27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C6D20277C1E007841F9 /* Defaults.swift */; };
@@ -109,6 +110,7 @@
 		27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModelTests.swift; sourceTree = "<group>"; };
 		27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModelTests.swift; sourceTree = "<group>"; };
 		27996E2D202D092F007C1FFE /* WeatherDayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModel.swift; sourceTree = "<group>"; };
+		27996E30202D0CD1007C1FFE /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -373,6 +375,14 @@
 			path = "Test Cases";
 			sourceTree = "<group>";
 		};
+		27996E2F202D0CC3007C1FFE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				27996E30202D0CD1007C1FFE /* AddLocationViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		27C36C4620276D37007841F9 = {
 			isa = PBXGroup;
 			children = (
@@ -403,7 +413,6 @@
 				27C36C6A202772A6007841F9 /* Resources */,
 				27C36C6820276EC2007841F9 /* Supporting Files */,
 				27C36C6420276E0C007841F9 /* View Controllers */,
-				27C36C6520276EB0007841F9 /* View Models */,
 			);
 			path = Cloudy;
 			sourceTree = "<group>";
@@ -417,13 +426,6 @@
 				276910CE20288F0F0011BA79 /* Settings View Controller */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		27C36C6520276EB0007841F9 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		27C36C6620276EB7007841F9 /* Models */ = {
@@ -551,6 +553,7 @@
 		27DB2146202A16FB000493A5 /* Add Location View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27996E2F202D0CC3007C1FFE /* View Models */,
 				27DB214C202A1834000493A5 /* Cells */,
 				27DB2147202A1705000493A5 /* XIB */,
 				27DB2148202A171C000493A5 /* AddLocationViewController.swift */,
@@ -725,6 +728,7 @@
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
 				27996E04202C9B9E007C1FFE /* WeatherDayRepresentable.swift in Sources */,
+				27996E31202D0CD1007C1FFE /* AddLocationViewModel.swift in Sources */,
 				27996DFC202C7B89007C1FFE /* SettingsTemperatureViewModel.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,
 				27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */,
