@@ -39,6 +39,7 @@
 		27996E24202CCEDA007C1FFE /* darksky.json in Resources */ = {isa = PBXBuildFile; fileRef = 27996E23202CCEDA007C1FFE /* darksky.json */; };
 		27996E26202CCF3A007C1FFE /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E25202CCF3A007C1FFE /* XCTestCase.swift */; };
 		27996E2A202CD07D007C1FFE /* DayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */; };
+		27996E2C202CDAB1007C1FFE /* WeekViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */; };
 		27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C5220276D37007841F9 /* AppDelegate.swift */; };
 		27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C5920276D37007841F9 /* Assets.xcassets */; };
 		27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C6D20277C1E007841F9 /* Defaults.swift */; };
@@ -105,6 +106,7 @@
 		27996E23202CCEDA007C1FFE /* darksky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darksky.json; sourceTree = "<group>"; };
 		27996E25202CCF3A007C1FFE /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModelTests.swift; sourceTree = "<group>"; };
+		27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModelTests.swift; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				27996E1F202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift */,
 				27996E21202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift */,
 				27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */,
+				27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */,
 			);
 			path = "Test Cases";
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				27996E1C202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift in Sources */,
 				27996E20202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift in Sources */,
 				27996E22202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift in Sources */,
+				27996E2C202CDAB1007C1FFE /* WeekViewViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
