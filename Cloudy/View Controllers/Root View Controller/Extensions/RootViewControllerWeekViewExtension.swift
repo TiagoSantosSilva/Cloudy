@@ -20,15 +20,14 @@ extension RootViewController {
     internal func updateWeekView() {
         weekActivityIndicator.stopAnimating()
         weekWeatherTableView.refreshControl?.endRefreshing()
-        turnWeekContainerVisible()
         
-        guard week != nil else {
+        guard weekViewViewModel != nil else {
             messageLabel.isHidden = false
             messageLabel.text = "Cloudy was unable to fetch weather data."
             return
         }
         
-        weekWeatherTableView.reloadData()
+        updateWeatherDataContainer()
     }
     
     func turnWeekContainerVisible() {
@@ -52,8 +51,8 @@ extension RootViewController {
     
     // MARK: -
     
-    internal func updateWeatherDataContainer(withWeatherData weatherData: [WeatherDayData]) {
-        
+    internal func updateWeatherDataContainer() {
+        turnWeekContainerVisible()
         weekWeatherTableView.reloadData()
     }
     

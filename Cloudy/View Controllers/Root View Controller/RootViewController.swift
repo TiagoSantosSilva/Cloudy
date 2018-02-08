@@ -63,26 +63,12 @@ class RootViewController: UIViewController {
         }
     }
     
-    var week: [WeatherDayData]? {
+    var weekViewViewModel: WeekViewViewModel? {
         didSet {
             updateWeekView()
         }
     }
-    
-    // MARK: -
-    
-    internal lazy var dayFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        return dateFormatter
-    }()
-    
-    internal lazy var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM d"
-        return dateFormatter
-    }()
-    
+
     // MARK: - View life cycle
     
     override func viewDidLoad() {
@@ -160,7 +146,7 @@ class RootViewController: UIViewController {
                 self.dayViewViewModel = DayViewViewModel(weatherData: response)
                 
                 // Configure Week View Controller
-                self.week = response.dailyData
+                self.weekViewViewModel = WeekViewViewModel(weatherData: response.dailyData)
             }
         }
     }

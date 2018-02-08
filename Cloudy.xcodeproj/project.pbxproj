@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		270A9CFF202B3E3800FE0F5F /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */; };
+		270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */; };
 		274B6FC0202A6B3F009F7905 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */; };
 		274B6FC1202A6B3F009F7905 /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */; };
 		276910C7202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
+		270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
 		276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewDelegateExtension.swift; sourceTree = "<group>"; };
@@ -101,44 +103,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		270A9CF9202B3DBA00FE0F5F /* Day View */ = {
-			isa = PBXGroup;
-			children = (
-				270A9CFC202B3E2300FE0F5F /* View Model */,
-			);
-			path = "Day View";
-			sourceTree = "<group>";
-		};
-		270A9CFA202B3DC400FE0F5F /* Week View */ = {
-			isa = PBXGroup;
-			children = (
-				270A9CFD202B3E2900FE0F5F /* View Model */,
-			);
-			path = "Week View";
-			sourceTree = "<group>";
-		};
-		270A9CFB202B3DDA00FE0F5F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				270A9CF9202B3DBA00FE0F5F /* Day View */,
-				270A9CFA202B3DC400FE0F5F /* Week View */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		270A9CFC202B3E2300FE0F5F /* View Model */ = {
+		270A9CFB202B3DDA00FE0F5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */,
+				270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */,
 			);
-			path = "View Model";
-			sourceTree = "<group>";
-		};
-		270A9CFD202B3E2900FE0F5F /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Model";
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		274B6FBD202A6B23009F7905 /* Loading Screen View Controller */ = {
@@ -368,7 +339,7 @@
 		27C36C8720279B5F007841F9 /* Root View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				270A9CFB202B3DDA00FE0F5F /* Views */,
+				270A9CFB202B3DDA00FE0F5F /* ViewModels */,
 				27C36C8920279B97007841F9 /* Cells */,
 				2784C8862027AAD5003181B6 /* Extensions */,
 				27C36C8320277F9F007841F9 /* RootViewController.swift */,
@@ -539,6 +510,7 @@
 				274B6FC0202A6B3F009F7905 /* LoadingScreenViewController.swift in Sources */,
 				276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */,
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
+				270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */,
 				27C36C7020277C2A007841F9 /* API.swift in Sources */,
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,

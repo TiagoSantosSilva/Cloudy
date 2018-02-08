@@ -11,12 +11,13 @@ import UIKit
 extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return week == nil ? 0 : 1
+        guard let weekViewViewModel = weekViewViewModel else { return 0 }
+        return weekViewViewModel.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let week = week else { return 0 }
-        return week.count
+        guard let weekViewViewModel = weekViewViewModel else { return 0 }
+        return weekViewViewModel.numberOfDays
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,37 +25,13 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let week = week {
-            // Fetch Weather Data
-            let weatherData = week[indexPath.row]
-            
-            var windSpeed = weatherData.windSpeed
-            var temperatureMin = weatherData.temperatureMin
-            var temperatureMax = weatherData.temperatureMax
-            
-            if UserDefaults.temperatureNotation() != .fahrenheit {
-                temperatureMin = temperatureMin.toCelcius()
-                temperatureMax = temperatureMax.toCelcius()
-            }
-            
-            // Configure Cell
-            cell.dayLabel.text = dayFormatter.string(from: weatherData.time)
-            cell.dateLabel.text = dateFormatter.string(from: weatherData.time)
-            
-            let min = String(format: "%.0f°", temperatureMin)
-            let max = String(format: "%.0f°", temperatureMax)
-            
-            cell.temperatureLabel.text = "\(min) - \(max)"
-            
-            if UserDefaults.unitsNotation() != .imperial {
-                windSpeed = windSpeed.toKPH()
-                cell.windSpeedLabel.text = String(format: "%.f KPH", windSpeed)
-            } else {
-                cell.windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
-            }
-            
-            cell.iconImageView.image = imageForIcon(withName: weatherData.icon)
-        }
+        guard let weekViewViewModel = weekViewViewModel else { return cell }
+        
+        cell.dayLabel.text = weekViewViewModel.day(for: indexPath.row)
+        cell.dateLabel.text = weekViewViewModel.date(for: indexPath.row)
+        cell.iconImageView.image = weekViewViewModel.image(for: indexPath.row)
+        cell.windSpeedLabel.text = weekViewViewModel.windSpeed(for: indexPath.row)
+        cell.temperatureLabel.text = weekViewViewModel.temperature(for: indexPath.row)
         
         return cell
     }
