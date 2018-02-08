@@ -25,8 +25,12 @@ struct SettingsTimeViewModel {
         }
     }
     
-    var acessoryType: UITableViewCellAccessoryType {
+    var accessoryType: UITableViewCellAccessoryType {
         guard UserDefaults.timeNotation() == timeNotation else { return .none }
         return .checkmark
     }
+}
+
+extension SettingsTimeViewModel: SettingsRepresentable {
+    
 }

@@ -25,8 +25,12 @@ struct SettingsUnitsViewModel {
         }
     }
     
-    var acessoryType: UITableViewCellAccessoryType {
+    var accessoryType: UITableViewCellAccessoryType {
         guard UserDefaults.unitsNotation() == unitsNotation else { return .none }
         return .checkmark
     }
+}
+
+extension SettingsUnitsViewModel: SettingsRepresentable {
+    
 }
