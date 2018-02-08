@@ -48,14 +48,14 @@ class DayViewViewModelTests: XCTestCase {
         let timeNotation: TimeNotation = .twelveHour
         UserDefaults.standard.set(timeNotation.rawValue, forKey: UserDefaultsKeys.timeNotation)
         
-        XCTAssertEqual(viewModel.time, "01:57 PM")
+        XCTAssertEqual(viewModel.time, "12:57 PM")
     }
     
     func testTime_TwentyFourHour() {
         let timeNotation: TimeNotation = .twentyFourHour
         UserDefaults.standard.set(timeNotation.rawValue, forKey: UserDefaultsKeys.timeNotation)
         
-        XCTAssertEqual(viewModel.time, "13:57")
+        XCTAssertEqual(viewModel.time, "12:57")
     }
     
     // MARK: - Tests for Temperature
