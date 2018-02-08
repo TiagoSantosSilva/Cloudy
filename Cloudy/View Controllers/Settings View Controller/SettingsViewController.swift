@@ -93,35 +93,31 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch section {
         case .time:
-            cell.mainLabel.text = (indexPath.row == 0) ? "12 Hour" : "24 Hour"
-            
-            let timeNotation = UserDefaults.timeNotation()
-            
-            if indexPath.row == timeNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let timeNotation = TimeNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingsTimeViewModel(timeNotation: timeNotation)
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.acessoryType
+            
         case .units:
-            cell.mainLabel.text = (indexPath.row == 0) ? "Imperial" : "Metric"
-            
-            let unitNotation = UserDefaults.unitsNotation()
-            
-            if indexPath.row == unitNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let unitsNotation = UnitsNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingsUnitsViewModel(unitsNotation: unitsNotation)
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.acessoryType
+            
         case .temperature:
-            cell.mainLabel.text = (indexPath.row == 0) ? "Fahrenheit" : "Celcius"
-            
-            let temperatureNotation = UserDefaults.temperatureNotation()
-            
-            if indexPath.row == temperatureNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let temperatureNotation = TemperatureNotation(rawValue: indexPath.row) else {
+                fatalError("Unexpected Index Path")
             }
+            
+            let viewModel = SettingsTemperatureViewModel(temperatureNotation: temperatureNotation)
+            cell.mainLabel.text = viewModel.text
+            cell.accessoryType = viewModel.acessoryType
         }
         return cell
     }

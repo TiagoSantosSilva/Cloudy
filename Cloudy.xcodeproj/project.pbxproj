@@ -27,6 +27,9 @@
 		2784C88A2027B729003181B6 /* RootViewControllerLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */; };
 		2784C88C2027B768003181B6 /* RootViewControllerDayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */; };
 		2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784C88D2027B772003181B6 /* RootViewControllerWeekViewExtension.swift */; };
+		27996DF8202C78D0007C1FFE /* SettingsTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DF7202C78D0007C1FFE /* SettingsTimeViewModel.swift */; };
+		27996DFA202C7AC1007C1FFE /* SettingsUnitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DF9202C7AC1007C1FFE /* SettingsUnitsViewModel.swift */; };
+		27996DFC202C7B89007C1FFE /* SettingsTemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DFB202C7B89007C1FFE /* SettingsTemperatureViewModel.swift */; };
 		27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C5220276D37007841F9 /* AppDelegate.swift */; };
 		27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C5920276D37007841F9 /* Assets.xcassets */; };
 		27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C6D20277C1E007841F9 /* Defaults.swift */; };
@@ -69,6 +72,9 @@
 		2784C8892027B729003181B6 /* RootViewControllerLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerLocationExtension.swift; sourceTree = "<group>"; };
 		2784C88B2027B768003181B6 /* RootViewControllerDayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewExtension.swift; sourceTree = "<group>"; };
 		2784C88D2027B772003181B6 /* RootViewControllerWeekViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerWeekViewExtension.swift; sourceTree = "<group>"; };
+		27996DF7202C78D0007C1FFE /* SettingsTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTimeViewModel.swift; sourceTree = "<group>"; };
+		27996DF9202C7AC1007C1FFE /* SettingsUnitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUnitsViewModel.swift; sourceTree = "<group>"; };
+		27996DFB202C7B89007C1FFE /* SettingsTemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTemperatureViewModel.swift; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 		276910CE20288F0F0011BA79 /* Settings View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27996DF6202C7896007C1FFE /* View Models */,
 				276910CF202892AD0011BA79 /* SettingsViewController.swift */,
 				276910D5202892C10011BA79 /* Cells */,
 				276910D4202892BB0011BA79 /* Extensions */,
@@ -215,6 +222,16 @@
 				2784C88D2027B772003181B6 /* RootViewControllerWeekViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27996DF6202C7896007C1FFE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				27996DF7202C78D0007C1FFE /* SettingsTimeViewModel.swift */,
+				27996DF9202C7AC1007C1FFE /* SettingsUnitsViewModel.swift */,
+				27996DFB202C7B89007C1FFE /* SettingsTemperatureViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		27C36C4620276D37007841F9 = {
@@ -498,6 +515,8 @@
 				27C36C8220277DB9007841F9 /* DataManager.swift in Sources */,
 				27DB214A202A171C000493A5 /* AddLocationViewController.swift in Sources */,
 				276910D82028C7800011BA79 /* SettingCell.swift in Sources */,
+				27996DF8202C78D0007C1FFE /* SettingsTimeViewModel.swift in Sources */,
+				27996DFA202C7AC1007C1FFE /* SettingsUnitsViewModel.swift in Sources */,
 				27DB21422029DF2E000493A5 /* LocationRepresentable.swift in Sources */,
 				27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */,
 				276910E220290F2B0011BA79 /* LocationCell.swift in Sources */,
@@ -515,6 +534,7 @@
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
+				27996DFC202C7B89007C1FFE /* SettingsTemperatureViewModel.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,
 				27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */,
 				276910C9202881FF0011BA79 /* RootViewControllerWeekViewDelegate.swift in Sources */,
