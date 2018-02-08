@@ -10,25 +10,25 @@ import UIKit
 
 class WeekWeatherCell: UITableViewCell {
     
-    // MARK: - identifiers
+    // MARK: - Identifiers
+    
     static let reuseIdentifier = "WeekWeatherCell"
     static let nibIdentifier = "WeekWeatherCell"
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var windSpeedLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Configuration
+    func configure(withViewModel viewModel: WeatherDayRepresentable) {
+        dayLabel.text = viewModel.day
+        dateLabel.text = viewModel.date
+        temperatureLabel.text = viewModel.temperature
+        windSpeedLabel.text = viewModel.windSpeed
+        iconImageView.image = viewModel.image
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -31,6 +31,8 @@
 		27996DFA202C7AC1007C1FFE /* SettingsUnitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DF9202C7AC1007C1FFE /* SettingsUnitsViewModel.swift */; };
 		27996DFC202C7B89007C1FFE /* SettingsTemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DFB202C7B89007C1FFE /* SettingsTemperatureViewModel.swift */; };
 		27996DFF202C8126007C1FFE /* SettingsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996DFE202C8126007C1FFE /* SettingsRepresentable.swift */; };
+		27996E01202C9962007C1FFE /* WeatherDayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */; };
+		27996E04202C9B9E007C1FFE /* WeatherDayRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */; };
 		27C36C5320276D37007841F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C5220276D37007841F9 /* AppDelegate.swift */; };
 		27C36C5A20276D37007841F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C36C5920276D37007841F9 /* Assets.xcassets */; };
 		27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C36C6D20277C1E007841F9 /* Defaults.swift */; };
@@ -77,6 +79,8 @@
 		27996DF9202C7AC1007C1FFE /* SettingsUnitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUnitsViewModel.swift; sourceTree = "<group>"; };
 		27996DFB202C7B89007C1FFE /* SettingsTemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTemperatureViewModel.swift; sourceTree = "<group>"; };
 		27996DFE202C8126007C1FFE /* SettingsRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepresentable.swift; sourceTree = "<group>"; };
+		27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModel.swift; sourceTree = "<group>"; };
+		27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayRepresentable.swift; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */,
 				270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */,
+				27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -245,6 +250,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		27996E02202C9B88007C1FFE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		27C36C4620276D37007841F9 = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +380,7 @@
 		27C36C8720279B5F007841F9 /* Root View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27996E02202C9B88007C1FFE /* Protocols */,
 				270A9CFB202B3DDA00FE0F5F /* ViewModels */,
 				27C36C8920279B97007841F9 /* Cells */,
 				2784C8862027AAD5003181B6 /* Extensions */,
@@ -538,6 +552,7 @@
 				27C36C7320277C8B007841F9 /* Conversions.swift in Sources */,
 				27DB21452029DFA3000493A5 /* LocationsViewModel.swift in Sources */,
 				274B6FC0202A6B3F009F7905 /* LoadingScreenViewController.swift in Sources */,
+				27996E01202C9962007C1FFE /* WeatherDayViewViewModel.swift in Sources */,
 				276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */,
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
 				270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */,
@@ -545,6 +560,7 @@
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
 				27C36C8D20279BC2007841F9 /* WeekWeatherCell.swift in Sources */,
 				2784C88E2027B772003181B6 /* RootViewControllerWeekViewExtension.swift in Sources */,
+				27996E04202C9B9E007C1FFE /* WeatherDayRepresentable.swift in Sources */,
 				27996DFC202C7B89007C1FFE /* SettingsTemperatureViewModel.swift in Sources */,
 				27C36C7820277CF2007841F9 /* Location.swift in Sources */,
 				27C36C6E20277C1E007841F9 /* Defaults.swift in Sources */,

@@ -27,12 +27,7 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let weekViewViewModel = weekViewViewModel else { return cell }
         
-        cell.dayLabel.text = weekViewViewModel.day(for: indexPath.row)
-        cell.dateLabel.text = weekViewViewModel.date(for: indexPath.row)
-        cell.iconImageView.image = weekViewViewModel.image(for: indexPath.row)
-        cell.windSpeedLabel.text = weekViewViewModel.windSpeed(for: indexPath.row)
-        cell.temperatureLabel.text = weekViewViewModel.temperature(for: indexPath.row)
-        
+        cell.configure(withViewModel: weekViewViewModel.viewModel(for: indexPath.row))
         return cell
     }
 }
