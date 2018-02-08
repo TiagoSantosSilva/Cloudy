@@ -54,6 +54,16 @@
 		27DB214B202A171C000493A5 /* AddLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DB2149202A171C000493A5 /* AddLocationViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		27996E12202CA036007C1FFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27C36C4720276D37007841F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27C36C4E20276D37007841F9;
+			remoteInfo = Cloudy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +91,8 @@
 		27996DFE202C8126007C1FFE /* SettingsRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepresentable.swift; sourceTree = "<group>"; };
 		27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModel.swift; sourceTree = "<group>"; };
 		27996E03202C9B9E007C1FFE /* WeatherDayRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayRepresentable.swift; sourceTree = "<group>"; };
+		27996E0D202CA036007C1FFE /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27996E11202CA036007C1FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27C36C4F20276D37007841F9 /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C36C5220276D37007841F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C36C5920276D37007841F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +117,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27996E0A202CA036007C1FFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27C36C4C20276D37007841F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,7 +147,7 @@
 		274B6FBD202A6B23009F7905 /* Loading Screen View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */,
+				27996E07202C9E9A007C1FFE /* View Controller */,
 				274B6FC3202A6B49009F7905 /* XIB */,
 			);
 			path = "Loading Screen View Controller";
@@ -145,11 +164,11 @@
 		276910CE20288F0F0011BA79 /* Settings View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				27996DFD202C8115007C1FFE /* Protocols */,
-				27996DF6202C7896007C1FFE /* View Models */,
-				276910CF202892AD0011BA79 /* SettingsViewController.swift */,
 				276910D5202892C10011BA79 /* Cells */,
 				276910D4202892BB0011BA79 /* Extensions */,
+				27996DFD202C8115007C1FFE /* Protocols */,
+				27996E08202C9EBC007C1FFE /* View Controller */,
+				27996DF6202C7896007C1FFE /* View Models */,
 				276910D3202892B10011BA79 /* XIB */,
 			);
 			path = "Settings View Controller";
@@ -183,10 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				27DB2146202A16FB000493A5 /* Add Location View Controller */,
-				27DB21432029DF81000493A5 /* View Models */,
-				276910DB20290E4F0011BA79 /* LocationsViewController.swift */,
 				276910DF20290F190011BA79 /* Cells */,
 				27DB21402029DF1A000493A5 /* Protocols */,
+				27996E06202C9E8F007C1FFE /* View Controller */,
+				27DB21432029DF81000493A5 /* View Models */,
 				276910E520290F790011BA79 /* XIB */,
 			);
 			path = "Locations View Controller";
@@ -258,10 +277,83 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		27996E05202C9E7C007C1FFE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27C36C8320277F9F007841F9 /* RootViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27996E06202C9E8F007C1FFE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				276910DB20290E4F0011BA79 /* LocationsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27996E07202C9E9A007C1FFE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27996E08202C9EBC007C1FFE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				276910CF202892AD0011BA79 /* SettingsViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		27996E0E202CA036007C1FFE /* CloudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				27996E19202CA065007C1FFE /* Extensions */,
+				27996E18202CA061007C1FFE /* Stubs */,
+				27996E17202CA057007C1FFE /* Supporting Files */,
+				27996E1A202CA06F007C1FFE /* Test Cases */,
+			);
+			path = CloudyTests;
+			sourceTree = "<group>";
+		};
+		27996E17202CA057007C1FFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27996E11202CA036007C1FFE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27996E18202CA061007C1FFE /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		27996E19202CA065007C1FFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		27996E1A202CA06F007C1FFE /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
 		27C36C4620276D37007841F9 = {
 			isa = PBXGroup;
 			children = (
 				27C36C5120276D37007841F9 /* Cloudy */,
+				27996E0E202CA036007C1FFE /* CloudyTests */,
 				27C36C5020276D37007841F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -270,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				27C36C4F20276D37007841F9 /* Cloudy.app */,
+				27996E0D202CA036007C1FFE /* CloudyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -380,11 +473,11 @@
 		27C36C8720279B5F007841F9 /* Root View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				27996E02202C9B88007C1FFE /* Protocols */,
-				270A9CFB202B3DDA00FE0F5F /* ViewModels */,
 				27C36C8920279B97007841F9 /* Cells */,
 				2784C8862027AAD5003181B6 /* Extensions */,
-				27C36C8320277F9F007841F9 /* RootViewController.swift */,
+				27996E02202C9B88007C1FFE /* Protocols */,
+				27996E05202C9E7C007C1FFE /* View Controller */,
+				270A9CFB202B3DDA00FE0F5F /* ViewModels */,
 				27C36C8820279B85007841F9 /* XIB */,
 			);
 			path = "Root View Controller";
@@ -459,6 +552,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		27996E0C202CA036007C1FFE /* CloudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27996E14202CA036007C1FFE /* Build configuration list for PBXNativeTarget "CloudyTests" */;
+			buildPhases = (
+				27996E09202CA036007C1FFE /* Sources */,
+				27996E0A202CA036007C1FFE /* Frameworks */,
+				27996E0B202CA036007C1FFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27996E13202CA036007C1FFE /* PBXTargetDependency */,
+			);
+			name = CloudyTests;
+			productName = CloudyTests;
+			productReference = 27996E0D202CA036007C1FFE /* CloudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		27C36C4E20276D37007841F9 /* Cloudy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27C36C6120276D37007841F9 /* Build configuration list for PBXNativeTarget "Cloudy" */;
@@ -486,6 +597,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Tiago Santos";
 				TargetAttributes = {
+					27996E0C202CA036007C1FFE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 27C36C4E20276D37007841F9;
+					};
 					27C36C4E20276D37007841F9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -506,11 +622,19 @@
 			projectRoot = "";
 			targets = (
 				27C36C4E20276D37007841F9 /* Cloudy */,
+				27996E0C202CA036007C1FFE /* CloudyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27996E0B202CA036007C1FFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27C36C4D20276D37007841F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,6 +654,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27996E09202CA036007C1FFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27C36C4B20276D37007841F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -575,7 +706,47 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		27996E13202CA036007C1FFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27C36C4E20276D37007841F9 /* Cloudy */;
+			targetProxy = 27996E12202CA036007C1FFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		27996E15202CA036007C1FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64E8842TP6;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Santos.CloudyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Debug;
+		};
+		27996E16202CA036007C1FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64E8842TP6;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Santos.CloudyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Release;
+		};
 		27C36C5F20276D37007841F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -716,6 +887,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27996E14202CA036007C1FFE /* Build configuration list for PBXNativeTarget "CloudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27996E15202CA036007C1FFE /* Debug */,
+				27996E16202CA036007C1FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27C36C4A20276D37007841F9 /* Build configuration list for PBXProject "Cloudy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
