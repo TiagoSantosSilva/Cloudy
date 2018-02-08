@@ -721,7 +721,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64E8842TP6;
-				INFOPLIST_FILE = CloudyTests/Info.plist;
+				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Santos.CloudyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,7 +737,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64E8842TP6;
-				INFOPLIST_FILE = CloudyTests/Info.plist;
+				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiago-Santos.CloudyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
