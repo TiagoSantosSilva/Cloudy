@@ -12,6 +12,7 @@
 		270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */; };
 		2745955F202DCBDA0049F0A8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745955E202DCBDA0049F0A8 /* LocationService.swift */; };
 		27459563202DCC5E0049F0A8 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27459562202DCC5E0049F0A8 /* Geocoder.swift */; };
+		27459565202DD0FF0049F0A8 /* AddLocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27459564202DD0FF0049F0A8 /* AddLocationViewModelTests.swift */; };
 		274B6FC0202A6B3F009F7905 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */; };
 		274B6FC1202A6B3F009F7905 /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */; };
 		276910C7202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */; };
@@ -84,6 +85,7 @@
 		270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		2745955E202DCBDA0049F0A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		27459562202DCC5E0049F0A8 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
+		27459564202DD0FF0049F0A8 /* AddLocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModelTests.swift; sourceTree = "<group>"; };
 		274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
 		276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewDelegateExtension.swift; sourceTree = "<group>"; };
@@ -387,12 +389,13 @@
 		27996E1A202CA06F007C1FFE /* Test Cases */ = {
 			isa = PBXGroup;
 			children = (
+				27459564202DD0FF0049F0A8 /* AddLocationViewModelTests.swift */,
 				27996E29202CD07D007C1FFE /* DayViewViewModelTests.swift */,
 				27996E21202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift */,
 				27996E1B202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift */,
 				27996E1F202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift */,
-				27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */,
 				27996E2D202D092F007C1FFE /* WeatherDayViewViewModel.swift */,
+				27996E2B202CDAB1007C1FFE /* WeekViewViewModelTests.swift */,
 			);
 			path = "Test Cases";
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				27996E2A202CD07D007C1FFE /* DayViewViewModelTests.swift in Sources */,
 				27996E26202CCF3A007C1FFE /* XCTestCase.swift in Sources */,
 				27996E1C202CA2E8007C1FFE /* SettingsTimeViewModelTests.swift in Sources */,
+				27459565202DD0FF0049F0A8 /* AddLocationViewModelTests.swift in Sources */,
 				27996E20202CC99E007C1FFE /* SettingsUnitsViewModelTests.swift in Sources */,
 				27996E22202CCBD2007C1FFE /* SettingsTemperatureViewModelTests.swift in Sources */,
 				27996E2E202D092F007C1FFE /* WeatherDayViewViewModel.swift in Sources */,
