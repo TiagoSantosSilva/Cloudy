@@ -10,6 +10,8 @@
 		100CA8F2BC6A6814E13C01D7 /* Pods_CloudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F044A5372AEBDC6CEFC205 /* Pods_CloudyTests.framework */; };
 		270A9CFF202B3E3800FE0F5F /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */; };
 		270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */; };
+		2745955F202DCBDA0049F0A8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745955E202DCBDA0049F0A8 /* LocationService.swift */; };
+		27459563202DCC5E0049F0A8 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27459562202DCC5E0049F0A8 /* Geocoder.swift */; };
 		274B6FC0202A6B3F009F7905 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */; };
 		274B6FC1202A6B3F009F7905 /* LoadingScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */; };
 		276910C7202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */; };
@@ -80,6 +82,8 @@
 		223C786303891B3A493B8889 /* Pods-CloudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudyTests/Pods-CloudyTests.release.xcconfig"; sourceTree = "<group>"; };
 		270A9CFE202B3E3800FE0F5F /* DayViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		270A9D00202B4C8700FE0F5F /* WeekViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
+		2745955E202DCBDA0049F0A8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		27459562202DCC5E0049F0A8 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		274B6FBE202A6B3F009F7905 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		274B6FBF202A6B3F009F7905 /* LoadingScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingScreenViewController.xib; sourceTree = "<group>"; };
 		276910C6202881B70011BA79 /* RootViewControllerDayViewDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerDayViewDelegateExtension.swift; sourceTree = "<group>"; };
@@ -170,6 +174,14 @@
 				27996E00202C9962007C1FFE /* WeatherDayViewViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		27459560202DCC370049F0A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27459562202DCC5E0049F0A8 /* Geocoder.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		274B6FBD202A6B23009F7905 /* Loading Screen View Controller */ = {
@@ -423,6 +435,7 @@
 				27C36C6620276EB7007841F9 /* Models */,
 				27C36C7D20277D77007841F9 /* Protocols */,
 				27C36C6A202772A6007841F9 /* Resources */,
+				27459560202DCC370049F0A8 /* Services */,
 				27C36C6820276EC2007841F9 /* Supporting Files */,
 				27C36C6420276E0C007841F9 /* View Controllers */,
 			);
@@ -496,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				27C36C7E20277D83007841F9 /* JSONDecodable.swift */,
+				2745955E202DCBDA0049F0A8 /* LocationService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -856,6 +870,7 @@
 				27C36C8220277DB9007841F9 /* DataManager.swift in Sources */,
 				27DB214A202A171C000493A5 /* AddLocationViewController.swift in Sources */,
 				276910D82028C7800011BA79 /* SettingCell.swift in Sources */,
+				2745955F202DCBDA0049F0A8 /* LocationService.swift in Sources */,
 				27996DF8202C78D0007C1FFE /* SettingsTimeViewModel.swift in Sources */,
 				27996DFA202C7AC1007C1FFE /* SettingsUnitsViewModel.swift in Sources */,
 				27DB21422029DF2E000493A5 /* LocationRepresentable.swift in Sources */,
@@ -871,6 +886,7 @@
 				27996E01202C9962007C1FFE /* WeatherDayViewViewModel.swift in Sources */,
 				276910CD2028828A0011BA79 /* RootViewControllerLocationViewControllerDelegateExtension.swift in Sources */,
 				2784C8882027AAEF003181B6 /* RootViewControllerTableViewExtension.swift in Sources */,
+				27459563202DCC5E0049F0A8 /* Geocoder.swift in Sources */,
 				270A9D01202B4C8700FE0F5F /* WeekViewViewModel.swift in Sources */,
 				27C36C7020277C2A007841F9 /* API.swift in Sources */,
 				276910DD20290E4F0011BA79 /* LocationsViewController.swift in Sources */,
