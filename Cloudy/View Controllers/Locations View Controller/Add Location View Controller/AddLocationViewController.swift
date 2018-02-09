@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol AddLocationViewControllerDelegate {
     func controller(_ controller: AddLocationViewController, didAddLocation location: Location)
@@ -28,6 +30,10 @@ class AddLocationViewController: UIViewController {
     
     var viewModel: AddLocationViewModel!
     
+    // MARK: - Dispose Bag
+    
+    private let disposeBag = DisposeBag()
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -39,19 +45,17 @@ class AddLocationViewController: UIViewController {
     // MARK: - View Model Functions
     
     func setupViewModel() {
-        viewModel = AddLocationViewModel()
+        viewModel = AddLocationViewModel(query: searchBar.rx.text.orEmpty.asDriver())
         
-        viewModel.locationsDidChange = { [unowned self] (locations) in
-            self.tableView.reloadData()
-        }
+        viewModel.locations
+            .drive(onNext: { [unowned self] (_) in
+                // Update Table View
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
         
-        viewModel.queryingDidChange = { [unowned self] (querying) in
-            if querying {
-                self.activityIndicatorView.startAnimating()
-            } else {
-                self.activityIndicatorView.stopAnimating()
-            }
-        }
+        // Drive Activity Indicator View
+        viewModel.querying.drive(activityIndicatorView.rx.isAnimating).disposed(by: disposeBag)
     }
     
     // MARK: - Setups
@@ -76,8 +80,23 @@ class AddLocationViewController: UIViewController {
     
     // TODO: - Setup the search bar.
     func setupSearchBar() {
-        
         searchBar.becomeFirstResponder()
+        
+        // Search Button Clicked
+        searchBar.rx.searchButtonClicked
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [unowned self] in
+                self.searchBar.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+        
+        // Cancel Button Clicked
+        searchBar.rx.cancelButtonClicked
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [unowned self] in
+                self.searchBar.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
     }
     
     // TODO: - Setup 'Back' and 'Done' buttons.
@@ -118,19 +137,5 @@ extension AddLocationViewController: UITableViewDelegate {
 }
 
 extension AddLocationViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // Hide Keyboard
-        searchBar.resignFirstResponder()
-        
-        // Forward Geocode Address String
-        viewModel.query = searchBar.text ?? ""
-    }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        // Hide Keyboard
-        searchBar.resignFirstResponder()
-        
-        // Forward Geocode Address String
-        viewModel.query = searchBar.text ?? ""
-    }
 }
